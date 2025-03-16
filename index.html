@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny Alarm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="card">
+            <div class="card-header">
+                <h1>🚗 Destiny Alarm</h1>
+                <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+            </div>
+            <div class="card-body">
+                <div class="left-panel">
+                    <div class="input-group">
+                        <input type="text" id="destinationInput" placeholder="Enter destination (e.g., New York)">
+                        <button id="searchBtn" class="btn btn-primary">Set</button>
+                    </div>
+                    <div class="status-container">
+                        <p id="status" class="status-message">Enter a destination and start tracking.</p>
+                        <button id="startBtn" class="btn btn-success" disabled>Start Tracking</button>
+                    </div>
+                    <div class="info-container">
+                        <div class="info-item">
+                            <span class="info-label">Your Location:</span>
+                            <span id="userLocation" class="info-value">Not Available</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Destination:</span>
+                            <span id="destination" class="info-value">Not Set</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Distance:</span>
+                            <span id="distance" class="info-value">-</span> km
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Speed:</span>
+                            <span id="speed" class="info-value">0</span> km/h
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">ETA:</span>
+                            <span id="eta" class="info-value">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-panel">
+                    <div id="map" class="map-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
